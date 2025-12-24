@@ -1,0 +1,167 @@
+.earn-page {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  min-height: 100vh;
+  background: radial-gradient(circle at 90% 10%, rgba(99, 102, 241, 0.03) 0%, transparent 40%);
+}
+
+.earn-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.earn-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+/* Dashboard Stats */
+.earn-stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.earn-stat-card {
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+}
+
+.earn-stat-card .label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.earn-stat-card .value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Pool Grid */
+.pools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.pool-card {
+  padding: 2rem;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pool-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.pool-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pool-icons {
+  display: flex;
+  align-items: center;
+}
+
+.pool-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background: #000;
+}
+
+.pool-icon:last-child {
+  margin-left: -12px;
+}
+
+.pool-title h3 {
+  font-size: 1.25rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.pool-title span {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.pool-apr {
+  padding: 8px 16px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 12px;
+  color: #10B981;
+  font-weight: 700;
+  text-align: right;
+}
+
+.apr-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  display: block;
+  opacity: 0.8;
+}
+
+.pool-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.detail-item .label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.detail-item .value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  font-family: 'Inter', monospace;
+}
+
+.pool-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.pool-tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .pools-grid {
+        grid-template-columns: 1fr;
+    }
+}

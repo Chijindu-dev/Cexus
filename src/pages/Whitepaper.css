@@ -1,0 +1,141 @@
+.whitepaper-page {
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+  min-height: 100vh;
+  background: radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.05) 0%, transparent 50%);
+}
+
+.whitepaper-layout {
+  display: flex;
+  gap: 3rem;
+  position: relative;
+}
+
+/* Sidebar Navigation */
+.wp-sidebar {
+  width: 260px;
+  position: sticky;
+  top: 7rem;
+  height: fit-content;
+  flex-shrink: 0;
+}
+
+.wp-nav-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+}
+
+.wp-nav-links {
+  list-style: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.wp-nav-item {
+  margin-bottom: 4px;
+}
+
+.wp-nav-link {
+  display: block;
+  padding: 8px 16px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-left: 2px solid transparent;
+  margin-left: -1px;
+  transition: all 0.2s;
+}
+
+.wp-nav-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.wp-nav-link.active {
+  color: #2563EB;
+  border-left-color: #2563EB;
+  background: rgba(37, 99, 235, 0.05);
+}
+
+/* Content Area */
+.wp-content {
+  flex: 1;
+  max-width: 800px;
+}
+
+.wp-article h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.04em;
+}
+
+.wp-article .version {
+  font-family: 'Inter', monospace;
+  color: #2563EB;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.wp-section {
+  margin-bottom: 4rem;
+  scroll-margin-top: 8rem;
+}
+
+.wp-section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wp-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.wp-card {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  margin: 2rem 0;
+}
+
+.wp-card h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.wp-list {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.wp-list li {
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .wp-sidebar {
+    display: none;
+  }
+  .wp-content {
+    max-width: 100%;
+  }
+}

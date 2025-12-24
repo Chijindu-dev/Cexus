@@ -1,0 +1,84 @@
+.hiw-section {
+  padding: 6rem 0;
+  background: #050505;
+}
+
+.hiw-header {
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hiw-label {
+  color: var(--text-secondary, #A1A1AA);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hiw-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.hiw-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+}
+
+.hiw-card {
+  position: relative;
+  padding: 2rem;
+  border: 1px solid var(--border-light, #27272A);
+  border-radius: 16px;
+  background: var(--bg-surface, #121212);
+}
+
+.hiw-number {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 4rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  z-index: 0;
+  line-height: 1;
+}
+
+.hiw-icon-wrapper {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: #000;
+  font-size: 1.25rem;
+  z-index: 1;
+}
+
+.hiw-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hiw-card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.hiw-card-desc {
+  color: var(--text-secondary, #A1A1AA);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}

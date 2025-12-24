@@ -1,0 +1,82 @@
+.liquidity-section {
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--border-light, #27272A);
+}
+
+.liquidity-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.liquidity-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.liquidity-subtitle {
+  color: var(--text-secondary, #A1A1AA);
+  font-size: 1.1rem;
+}
+
+.liquidity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.pool-card {
+  padding: 1.5rem;
+  background: var(--bg-surface, #121212);
+}
+
+.pool-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.pool-pair {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.pool-risk {
+  border: 1px solid var(--border-light, #27272A);
+  color: var(--text-secondary, #A1A1AA);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.pool-stat-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  align-items: baseline;
+}
+
+.pool-stat-row.last {
+  margin-bottom: 2rem;
+}
+
+.pool-label {
+  color: var(--text-secondary, #A1A1AA);
+  font-size: 0.9rem;
+}
+
+.pool-apy {
+  color: var(--success, #10B981);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.pool-tvl {
+  color: var(--text-primary, #fff);
+  font-size: 1rem;
+}

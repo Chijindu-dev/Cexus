@@ -1,0 +1,52 @@
+.security-section {
+  padding: 6rem 0;
+  border-top: 1px solid var(--border-light, #27272A);
+  border-bottom: 1px solid var(--border-light, #27272A);
+}
+
+.security-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--text-primary, #fff);
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.security-badge-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.security-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.security-subtitle {
+  color: var(--text-secondary, #A1A1AA);
+  max-width: 600px;
+  margin: 0 auto 4rem auto;
+  font-size: 1.1rem;
+}
+
+.security-logos {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.security-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+}

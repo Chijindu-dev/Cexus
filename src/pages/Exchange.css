@@ -1,0 +1,265 @@
+.exchange-page {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.05) 0%, transparent 50%);
+}
+
+.exchange-layout {
+  display: flex;
+  gap: 1.5rem;
+  height: calc(100vh - 7rem); /* Full height minus header */
+  min-height: 750px;
+}
+
+/* Left Column: Chart & Data */
+.chart-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+}
+
+/* Base Card Style for Glassmorphism */
+.glass-panel {
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+/* Header Section */
+.exchange-header-card {
+  padding: 20px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px;
+}
+
+.pair-identifier {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* ... existing pair identifier children styles ... */
+
+.market-stats {
+  display: flex;
+  gap: 3rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  padding-left: 3rem;
+  margin-left: auto; /* Push to right if wrapping doesn't happen, but allow flex behavior */
+}
+
+@media (max-width: 1200px) {
+  .market-stats {
+    gap: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+    .exchange-header-card {
+        justify-content: flex-start;
+    }
+    .market-stats {
+        width: 100%;
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding-top: 1rem;
+        margin-top: 0.5rem;
+        overflow-x: auto; /* scroll if needed */
+        margin-left: 0;
+        justify-content: space-between;
+    }
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.stat-value {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 600;
+  font-family: 'Inter', monospace;
+}
+
+/* Chart Container */
+.chart-container-card {
+  flex: 2;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.chart-controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+  gap: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.time-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-secondary);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.time-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.time-btn.active {
+  color: #fff;
+  background: rgba(37, 99, 235, 0.1);
+  border-color: rgba(37, 99, 235, 0.2);
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.1);
+}
+
+/* Recent Trades / Tabs */
+.trades-container-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 250px;
+}
+
+.tabs-header {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0 16px;
+}
+
+.tab-btn {
+  padding: 16px 24px;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.tab-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #2563EB;
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+
+.tab-btn.active {
+  color: #fff;
+}
+
+.tab-btn.active::after {
+  transform: scaleX(1);
+}
+
+.trades-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Custom Scrollbar */
+.trades-list::-webkit-scrollbar {
+  width: 6px;
+}
+.trades-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.trades-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.trade-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px 24px;
+  font-family: 'Inter', monospace;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.01);
+  transition: background 0.1s;
+}
+
+.trade-row:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.trade-header {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 14px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.01);
+}
+
+/* Swap Section */
+.swap-section {
+  width: 380px;
+  flex-shrink: 0;
+}
+
+.text-green { color: #10B981; }
+.text-red { color: #EF4444; }
+
+@media (max-width: 1024px) {
+  .exchange-layout {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .swap-section {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  
+  .chart-column {
+    height: auto;
+  }
+  
+  .market-stats {
+    display: none;
+  }
+}
